@@ -1,0 +1,7 @@
+{
+  "name": "image-edit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
