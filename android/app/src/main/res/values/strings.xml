@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">image-edit</string>
+    <string name="title_activity_main">image-edit</string>
+    <string name="package_name">com.beatandcode.imagedit</string>
+    <string name="custom_url_scheme">com.beatandcode.imagedit</string>
+</resources>

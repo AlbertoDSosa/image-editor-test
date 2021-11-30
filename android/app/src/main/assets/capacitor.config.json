@@ -1,0 +1,6 @@
+{
+	"appId": "com.beatandcode.imagedit",
+	"appName": "image-edit",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

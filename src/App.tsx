@@ -6,13 +6,14 @@ import {
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonTabs,
+  IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import { create, images } from 'ionicons/icons';
+import Tab1 from './pages/AvatarEditorPage';
+import Tab2 from './pages/CropperPage';
+import Tab3 from './pages/TuiEditorPage';
+import GalleryPage from './pages/GalleryPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -38,31 +39,38 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
+          <Route exact path="/avatar-editor">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
+          <Route exact path="/cropperjs">
             <Tab2 />
           </Route>
-          <Route path="/tab3">
+          <Route path="/toastui-editor">
             <Tab3 />
           </Route>
+          <Route path="/gallery">
+            <GalleryPage />
+          </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/avatar-editor" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="avatar-editor" href="/avatar-editor">
+            <IonIcon icon={create} />
+            <IonLabel>Avatar Editor</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="cropperjs" href="/cropperjs">
+            <IonIcon icon={create} />
+            <IonLabel>CropperJS</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="toastui-editor" href="/toastui-editor">
+            <IonIcon icon={create} />
+            <IonLabel>Toast UI Editor</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="gallery" href="/gallery">
+            <IonIcon icon={images} />
+            <IonLabel>Gallery</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
